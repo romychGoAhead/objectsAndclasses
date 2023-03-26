@@ -7,31 +7,25 @@ public class Main {
         System.out.println("Задание 1");
         System.out.println();
 
-        Book oneBook = new Book("Шишка", "Виктор", 2005);
-        Book secondBook = new Book("join", "Григорий", 1880);
-        System.out.println("oneBook.title = " + oneBook.getTitle());
-        System.out.println("oneBook.author = " + oneBook.getAuthor());
-        System.out.println("oneBook.year = " + oneBook.getYear());
-        print();
-        oneBook.setYear(1990);
-        System.out.println("oneBook.year = " + oneBook.getYear());
-        print();
-        System.out.println("secondBook.name = " + secondBook.getTitle());
-        System.out.println("secondBook.author = " + secondBook.getAuthor());
-        System.out.println("secondBook.year = " + secondBook.getYear());
-        print();
-        oneBook.setYear(1990);
-        System.out.println("oneBook.year = " + oneBook.getYear());
+        Author pushkin = new Author("Александр", "Пушкин");
+        Book dubrovsky = new Book("Дубровский", pushkin, 1833);
+
+        System.out.println("Книга = " + dubrovsky.getTitle());
+        System.out.println("Автор = " + dubrovsky.getAuthor());
+        System.out.println("Год издания = " + dubrovsky.getYear());
         print();
 
-        Author oneAuthor = new Author("Виктор", "Мухачев");
-
-        System.out.println("oneAuthor.name = " + oneAuthor.getName());
-        System.out.println("oneAuthor.Surname = " + oneAuthor.getSurname());
+        dubrovsky.setYear(1841);
+        System.out.println("Год издания = " + dubrovsky.getYear());
         print();
-        Author secondAuthor = new Author("Никита", "Михалков");
-        System.out.println("secondAuthor.name = " + secondAuthor.getName());
-        System.out.println("secondAuthor.Surname = " + secondAuthor.getSurname());
+
+        Author gogol = new Author("Николай", "Гоголь");
+        Book Viy = new Book("Вий", gogol, 1835);
+
+        System.out.println("Книга = " + Viy.getTitle());
+        System.out.println("Автор = " + gogol);
+        System.out.println("Год издания = " + Viy.getYear());
+        print();
     }
 
 }

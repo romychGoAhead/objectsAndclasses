@@ -1,35 +1,36 @@
 public class Book {
 
     private String title;    // запишем свойства
-    private String author;
     private int year;
+    private Author author;
 
-
-    public Book(String title, String author, int year) {
+    public Book(String title, Author author, int year) {                         // можно this (title,author, year);
         this.title = title;
-        this.author = author;
         this.year = year;
-
+        this.author = author;
     }
 
     public String getTitle() {
+
         return this.title;
     }
 
-    public String getAuthor() {
-        return this.author;
-    }
-
     public int getYear() {
+
         return this.year;
     }
 
-
     public void setYear(int year) {
         this.year = year;
-
     }
+
+    public Author getAuthor() {
+
+        return this.author;
+    }
+
 }
+
 
 //Создайте класс Book, который содержит в себе данные о названии, авторе и годе публикации книги.
 // Типы полей должны быть String, Author (его мы создадим в п. 2) и int.
